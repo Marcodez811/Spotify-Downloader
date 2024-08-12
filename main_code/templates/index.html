@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href="../static/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Spotify Downloader</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <p>Spotify playlist downloader</p>
+        </div>
+        <div class="bar-container">
+            <form action="" method="post">
+                <input type="text" name="url" placeholder="Enter the playlist's url...">
+                <div class="download-button">
+                    <button id="download-btn" type="submit">
+                        <img src="../static/img/download_btn.png" id="btn-img" draggable="false">
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="logs-container">
+            <div class="top-text">
+                <p>Result:</p>
+            </div>
+            <div class="logs">
+                <ul class="log-list">
+                    {%for song in data%}
+                        <li style="margin-top: 20px;">
+                            <div class="songs">
+                                <div>
+                                    <img src="{{song['image']}}" class="album-pics"> 
+                                    <div style="text-align: left;"> 
+                                        <p>{{song['name']}} - {{song['artists']}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
