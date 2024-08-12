@@ -1,3 +1,5 @@
+**It was my first python project back in 22'**
+---
 1. 請先執行以下:
 pip3 install -r requirements.txt
 
